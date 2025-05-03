@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>MIRAKI Music</title>
+  <link rel="icon" href="https://i.imgur.com/Ie6nzzm.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://i.imgur.com/nHXSTzA.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px 25px 25px 25px;
+      min-height: 100vh;
+    }
+
+    .logo-animated {
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      animation: neon 3s linear infinite;
+      color: #ffffff;
+      letter-spacing: 6px;
+      margin-bottom: 40px;
+    }
+
+    @keyframes neon {
+      10%   {text-shadow: 0 0 15px #fff000, 0 0 25px #ff0000;}
+      20%  {text-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;}
+      30%  {text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;}
+      40%  {text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;}
+      50% {text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;}
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #000000, #1a1a2e, #2e00ff);
+      box-shadow: 0 0 25px #005eff;
+      border-radius: 15px;
+      border: 2px solid #007fff;
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+      background-color: #ff4e4e;
+      color: white;
+      padding: 14px;
+      margin: 10px auto;
+      width: 220px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff7777;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-start;
+      padding-left: 1%;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+
+    <div class="logo-animated">MIRAKI MUSIC</div>
+
+    <div class="section">
+      <h2> M I R A K I</h2>
+      <p><strong>M I R A K I</strong> — Исполнитель, Певец</p>
+      <p>Оригинальные профессиональные музыкальные композиции от <strong>мιякι</strong></p>
+      <p>Качественный музыкальный канал от <strong>M I _ R A K I</strong></p>
+      <p>Техподдержка в тг: @MIRAKI_OFFICIALS</p>
+    </div>
+
+    <div class="section">
+      <h2 style="margin-bottom: 12px;">Наши певцы</h2>
+
+      <h3 style="font-size: 26px; color: #0099FF;">Амир</h3>
+      <p><strong>Роль:</strong> Основатель команды MIRAKI</p>
+      <p><strong>Стили:</strong> R&B, хип-хоп, поп, drill, баллады</p>
+      <p><strong>Цена:</strong> 599–899 ₽ за трек</p>
+
+      <hr style="margin: 25px 0; border-color: #005eff;">
+
+      <h3 style="font-size: 26px; color: #0099FF;">Артем</h3>
+      <p><strong>Стили:</strong> фанки, поп, хип-хоп</p>
+      <p><strong>Цена:</strong> 350–450 ₽ за трек</p>
+
+      <hr style="margin: 25px 0; border-color: #005eff;">
+
+      <h3 style="font-size: 26px; color: #0099FF;">Миркун</h3>
+      <p><strong>Стили:</strong> рэп, трэп, баллада, R&B</p>
+      <p><strong>Цена:</strong> 350–400 ₽ за трек</p>
+    </div>
+
+    <div class="section">
+      <h2 style="font-size: 26px; color: #0099FF;">Связаться с нами</h2>
+      <div class="contact-info">
+        <span><strong>Телеграм:</strong> @MIRAKI_OFFICIALS</span>
+        <span><strong>Канал:</strong> @MIRAKI_ORIGINAL</span>
+        <span><strong>Бот:</strong> MIRAKI_SHOP_BOT</span>
+        <span><strong>Email:</strong> Mirakioriginal@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 style="font-size: 15px;">Подписчики</h2>
+      <div style="font-size: 15px;">2,500,000 подписчиков</div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 MIRAKI Music. Основатель MIRAKI. Все права защищены.
+    </div>
+
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    window.addEventListener('load', function () {
+      const audio = document.getElementById('bg-music');
+      audio.play().catch(() => {
+        window.addEventListener('click', () => audio.play(), { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
